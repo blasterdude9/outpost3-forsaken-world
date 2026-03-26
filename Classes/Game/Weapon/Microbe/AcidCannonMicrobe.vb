@@ -1,21 +1,15 @@
-''' <summary>
-''' Microbe Acid Cannon — very high penetration, ignores most armor.
-''' Single target, no splash, slow reload.
-''' </summary>
+''' <summary>Microbe Acid Cannon — very high penetration, ignores most armor.</summary>
 Public Class AcidCannonMicrobe
     Inherits Weapon
-
     Public Sub New()
-        _Type = WeaponType.ACID
-        _Ammo = 20
-        _MaxAmmo = 20
-        _ConcussionDamage = 10
-        _PenetrationDamage = 90
-        _SplashRadius = 0
-        _ReloadTicks = 7
+        _Type = WeaponType.ACID_CLOUD
+        _Range = 6
+        _CooldownMarks = 5
+        _BaseDamage = New DamageVector(10, 90)
     End Sub
-
-    Protected Overrides Function CalculateDamage() As Integer
-        Return _PenetrationDamage  ' Acid bypasses armor entirely
-    End Function
+    Public Overrides ReadOnly Property DisplayName() As String
+        Get
+            Return "Acid Cannon"
+        End Get
+    End Property
 End Class

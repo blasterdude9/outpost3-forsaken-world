@@ -19,7 +19,7 @@ Public Class SporeCrawlerMicrobe
         _TurnRate = 10.0
         _AttackRange = 150
         _FireIntervalTicks = 5
-        _Weapon = New SporeLauncherMicrobe()
+        _Weapon = New SporeLauncherWeapon()
         _Position = position
     End Sub
 

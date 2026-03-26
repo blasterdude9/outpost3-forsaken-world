@@ -1,13 +1,15 @@
+''' <summary>Gemini RPG — larger splash than Eden variant.</summary>
 Public Class RPGGemini
     Inherits Weapon
-
     Public Sub New()
         _Type = WeaponType.RPG
-        _Ammo = 28
-        _MaxAmmo = 28
-        _ConcussionDamage = 75
-        _PenetrationDamage = 18
-        _SplashRadius = 35.0
-        _ReloadTicks = 5
+        _Range = 8
+        _CooldownMarks = 3
+        _BaseDamage = New DamageVector(75, 18)
     End Sub
+    Public Overrides ReadOnly Property DisplayName() As String
+        Get
+            Return "RPG (Gemini)"
+        End Get
+    End Property
 End Class

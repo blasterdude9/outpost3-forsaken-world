@@ -155,13 +155,14 @@ Public Class OreDeposit
         End Get
     End Property
 
-    ''' <summary>Extract ore this mark. Returns (common, rare) actually extracted.</summary>
-    Public Function Extract() As Tuple(Of Integer, Integer)
+    ''' <summary>Extract ore this mark. Returns common ore extracted; sets rareExtracted via ByRef.</summary>
+    Public Function Extract(ByRef rareExtracted As Integer) As Integer
         Dim c As Integer = Math.Min(CommonYieldPerMark, CommonOreRemaining)
         Dim r As Integer = Math.Min(RareYieldPerMark, RareOreRemaining)
         CommonOreRemaining -= c
         RareOreRemaining -= r
-        Return New Tuple(Of Integer, Integer)(c, r)
+        rareExtracted = r
+        Return c
     End Function
 End Class
 

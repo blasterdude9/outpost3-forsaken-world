@@ -1,16 +1,21 @@
-''' <summary>Gemini EMP — longer disable duration but smaller splash than Eden's.</summary>
+''' <summary>Gemini EMP — disables buildings and vehicles in radius.</summary>
 Public Class EMPGemini
     Inherits Weapon
-
-    Public Const DISABLE_DURATION_TICKS As Integer = 30
-
     Public Sub New()
         _Type = WeaponType.EMP
-        _Ammo = 12
-        _MaxAmmo = 12
-        _ConcussionDamage = 0
-        _PenetrationDamage = 0
-        _SplashRadius = 35.0
-        _ReloadTicks = 12
+        _Range = 7
+        _CooldownMarks = 8
+        _BaseDamage = New DamageVector(5, 0)
     End Sub
+    Protected Overrides Function CalculateDamage(ByRef target As Unit) As DamageVector
+        If TypeOf target Is Building Then
+            DirectCast(target, Building).SetStatus(Building.BuildingStatus.DISABLED_EMP)
+        End If
+        Return _BaseDamage
+    End Function
+    Public Overrides ReadOnly Property DisplayName() As String
+        Get
+            Return "EMP (Gemini)"
+        End Get
+    End Property
 End Class
