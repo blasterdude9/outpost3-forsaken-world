@@ -1,32 +1,47 @@
 name: Build
+
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
     - uses: actions/checkout@v4
+
     - uses: microsoft/setup-msbuild@v2
-    - name: Fix reference path
+
+    - name: Fix Irrlicht reference path
       shell: powershell
       run: |
         New-Item -ItemType Directory -Force -Path "../../Development/IrrNetCP_SDK_0.8/bin/Release"
         Copy-Item "bin/Debug/Irrlicht.NET.dll" "../../Development/IrrNetCP_SDK_0.8/bin/Release/"
-        Copy-Item "bin/Debug/Irrlicht.dll" "../../Development/IrrNetCP_SDK_0.8/bin/Release/"
-        Copy-Item "bin/Debug/IrrlichtW.dll" "../../Development/IrrNetCP_SDK_0.8/bin/Release/"
+        Copy-Item "bin/Debug/Irrlicht.dll"     "../../Development/IrrNetCP_SDK_0.8/bin/Release/"
+        Copy-Item "bin/Debug/IrrlichtW.dll"    "../../Development/IrrNetCP_SDK_0.8/bin/Release/"
+
     - name: Build
       shell: powershell
-      run: msbuild "Outpost 3 Forsaken World.vbproj" /p:Configuration=Debug /p:Platform="Any CPU" /verbosity:normal /fl /flp:logfile=build.log
-    - uses: actions/upload-artifact@v4
+      run: |
+        msbuild "Outpost 3 Forsaken World.vbproj" `
+          /p:Configuration=Debug `
+          /p:Platform=AnyCPU `
+          /verbosity:normal `
+          /fl /flp:logfile=build.log
+
+    - name: Upload build log
       if: always()
+      uses: actions/upload-artifact@v4
       with:
         name: build-log
         path: build.log
-    - uses: actions/upload-artifact@v4
+
+    - name: Upload executable
       if: success()
+      uses: actions/upload-artifact@v4
       with:
         name: outpost3-exe
         path: bin/Debug/
