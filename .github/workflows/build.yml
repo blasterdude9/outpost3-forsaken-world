@@ -29,6 +29,7 @@ jobs:
         msbuild "Outpost 3 Forsaken World.vbproj" `
           /p:Configuration=Debug `
           /p:Platform=AnyCPU `
+          /p:PlatformTarget=x86 `
           /verbosity:normal `
           /fl /flp:logfile=build.log
 
