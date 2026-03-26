@@ -168,7 +168,6 @@
     <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\EvacTransportPlymouth.vb" />
     <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\EvacuationTransportPlymouth.vb" />
     <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\OreTruckPlymouth.vb" />
-    <Compile Include="Classes\Game\Unit\VehicleCollection.vb" />
     <Compile Include="Classes\Game\Util\DamageVector.vb" />
     <Compile Include="Classes\Game\VehicleFactory.vb" />
     <Compile Include="Classes\Game\Weapon.vb" />
@@ -177,7 +176,6 @@
     <Compile Include="Classes\Game\Weapon\Eden\MicrowaveEden.vb" />
     <Compile Include="Classes\Game\Weapon\Eden\RPGEden.vb" />
     <Compile Include="Classes\Game\Weapon\Eden\RailGunEden.vb" />
-    <Compile Include="Classes\Game\Weapon\Eden\RailgunEden.vb" />
     <Compile Include="Classes\Game\Weapon\Eden\StarflareEden.vb" />
     <Compile Include="Classes\Game\Weapon\Eden\SupernovaEden.vb" />
     <Compile Include="Classes\Game\Weapon\Eden\ThorsHammerEden.vb" />
@@ -191,7 +189,7 @@
     <Compile Include="Classes\Game\Weapon\Microbe\AcidCloudMicrobe.vb" />
     <Compile Include="Classes\Game\Weapon\Microbe\BlightProjectorMicrobe.vb" />
     <Compile Include="Classes\Game\Weapon\Microbe\PlasmaVineMicrobe.vb" />
-    <Compile Include="Classes\Game\Weapon\Microbe\SporeLauncherMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\SporeLauncherWeapon.vb" />
     <Compile Include="Classes\Game\Weapon\Plymouth\EMPPlymouth.vb" />
     <Compile Include="Classes\Game\Weapon\Plymouth\LaserPlymouth.vb" />
     <Compile Include="Classes\Game\Weapon\Plymouth\RPGPlymouth.vb" />
