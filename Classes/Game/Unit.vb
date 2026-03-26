@@ -134,5 +134,9 @@ Public MustInherit Class Unit
     Public Sub New()
     End Sub
 
+    Public Sub Repair(ByVal amount As Integer)
+        _HP = Math.Min(_MaxHP, _HP + amount)
+    End Sub
+
     Public MustOverride ReadOnly Property MeshFilename() As String
 End Class

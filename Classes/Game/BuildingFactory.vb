@@ -155,6 +155,7 @@ Public Class BuildingFactory
     End Function
 
     Private Shared Function MakeOrder(ByVal b As Building, ByRef owner As Player) As BuildQueue.BuildOrder
+        Dim ownerLocal As Player = owner
         Return New BuildQueue.BuildOrder(
             b.GetType().Name,
             b.BuildPointsRequired,
@@ -163,9 +164,9 @@ Public Class BuildingFactory
             Sub(order As BuildQueue.BuildOrder)
                 ' On complete: set building active and add to player collections
                 b.SetStatus(Building.BuildingStatus.ACTIVE)
-                owner.Buildings.Add(b)
+                ownerLocal.Buildings.Add(b)
                 If TypeOf b Is IPowerPlant Then
-                    owner.PowerPlants.Add(DirectCast(b, IPowerPlant))
+                    ownerLocal.PowerPlants.Add(DirectCast(b, IPowerPlant))
                 End If
             End Sub
         )

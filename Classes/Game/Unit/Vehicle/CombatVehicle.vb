@@ -6,7 +6,7 @@ Imports IrrlichtNETCP
 Public MustInherit Class CombatVehicle
     Inherits Vehicle
 
-    Protected _Weapon As Weapon
+    Protected Shadows _Weapon As Weapon
     Protected _AttackRange As Single
     Protected _TicksSinceLastShot As Integer = 0
     Protected _FireIntervalTicks As Integer = 3
@@ -41,7 +41,8 @@ Public MustInherit Class CombatVehicle
         _TicksSinceLastShot = 0
     End Sub
 
-    Public Sub Tick()
+    Public Overrides Sub Tick(ByVal markDuration As Double)
+        MyBase.Tick(markDuration)
         _TicksSinceLastShot += 1
     End Sub
 
@@ -55,7 +56,8 @@ Public MustInherit Class CombatVehicle
         Dim dist As Single = CSng(Math.Sqrt(dx * dx + dz * dz))
         If dist <= _AttackRange Then
             RecordShot()
-            Return _Weapon.Fire()
+            Dim dmg As DamageVector = _Weapon.Fire(target)
+            If dmg IsNot Nothing Then Return dmg.Concussion + dmg.Penetration
         End If
         Return 0
     End Function

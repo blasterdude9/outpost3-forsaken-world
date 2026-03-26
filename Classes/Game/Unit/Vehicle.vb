@@ -7,6 +7,16 @@ Imports IrrlichtNETCP
 Public MustInherit Class Vehicle
     Inherits Unit
 
+    Public Enum VehicleType As Integer
+        COMBAT = 0
+        TRANSPORT = 1
+        REPAIR = 2
+        CONSTRUCTION = 3
+        SCOUT = 4
+    End Enum
+
+    Protected _Type As VehicleType = VehicleType.TRANSPORT
+
     Public Enum VehicleState As Integer
         IDLE = 0
         MOVING = 1
@@ -110,6 +120,13 @@ Public MustInherit Class Vehicle
             Return _Chassis & "_" & _Turret & ".3ds"
         End Get
     End Property
+
+    Public Sub New(ByRef owner As Player)
+        MyBase.New(owner)
+    End Sub
+
+    Public Sub New()
+    End Sub
 
 End Class
 

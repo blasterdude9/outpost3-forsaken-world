@@ -20,8 +20,8 @@ Public Class AcidWalkerMicrobe
         _Position = position
     End Sub
 
-    Public Sub Tick()
-        MyBase.Tick()
+    Public Overloads Sub Tick()
+        MyBase.Tick(0.0)
         If _HP < _MaxHP Then _HP = CInt(Math.Min(_HP + SELF_REPAIR_RATE, _MaxHP))
     End Sub
 

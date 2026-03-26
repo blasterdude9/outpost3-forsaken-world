@@ -1,5 +1,5 @@
 ﻿Public MustInherit Class PlayerAI
-    Inherits AbstractPlayer
+    Inherits Player
 
     ''' <summary>
     ''' Create a new AI player, which utilizes AIFunction() to run the AI's routine

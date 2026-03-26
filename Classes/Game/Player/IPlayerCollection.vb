@@ -1,4 +1,4 @@
-﻿Public Class IPlayerCollection
+Public Class IPlayerCollection
     Inherits CollectionBase
 
     Public Function Add(ByVal value As IPlayer) As Integer
@@ -13,7 +13,7 @@
         List.Insert(index, value)
     End Sub
 
-    Default Public ReadOnly Property Item(ByVal index As Integer) As Player
+    Default Public ReadOnly Property Item(ByVal index As Integer) As IPlayer
         Get
             Return DirectCast(List.Item(index), IPlayer)
         End Get
