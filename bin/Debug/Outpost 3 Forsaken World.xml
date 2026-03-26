@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Outpost3ForsakenWorld
+</name>
+</assembly>
+<members>
+<member name="M:Outpost_3_Forsaken_World.AbstractPlayer.#ctor(System.String)">
+	<summary>
+ Creates a human player
+ </summary>
+	<param name="PlayerName">Name of the player as displayed to others</param>
+	<remarks></remarks>
+</member><member name="P:Outpost_3_Forsaken_World.AbstractPlayer.Name">
+	<summary>
+ Sets/Gets a Player's name
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.Unit.Damage(System.Int32)">
+	<summary>
+ Deal damage assumed to be concussive only
+ </summary>
+	<returns>Resulting HP of the unit</returns>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.Unit.Damage(System.Int32,System.Int32)">
+	<summary>
+ Deal concussive and penetrative damage 
+ </summary>
+	<param name="concussion">Amount of Concussion Damage</param>
+	<param name="penetration">Amount of Penetration Damage</param>
+	<returns>Resulting Unit HP</returns>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.Unit.Damage(Outpost_3_Forsaken_World.DamageVector)">
+	<summary>
+ Deal concussive and penetrative damage
+ </summary>
+	<param name="dmg">Damage Vector, specifying the concussive and penetrative damage</param>
+	<returns>Resulting Unit HP</returns>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.ConfigurationObj.#ctor">
+	<summary>
+ Loads Application Configuration from Registry
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.PlayerAI.#ctor">
+	<summary>
+ Create a new AI player, which utilizes AIFunction() to run the AI's routine
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.PlayerAI.RunAI">
+	<summary>
+ This function is what gets triggered each mark to execute the AI's procedure
+ and control it's actions. Try not to allow this to get too hefty.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Outpost_3_Forsaken_World.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Outpost_3_Forsaken_World.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Outpost_3_Forsaken_World.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:Outpost_3_Forsaken_World.Building.Status">
+	<summary>
+ Returns the current building status as a String representation
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Outpost_3_Forsaken_World.Building.IsCommandCenter">
+	<summary>
+ Returns true if this structure is a Command Center or not
+ </summary>
+	<value></value>
+	<returns>True if a Command Center</returns>
+	<remarks></remarks>
+</member><member name="P:Outpost_3_Forsaken_World.Building.IsActiveCommandCenter">
+	<summary>
+ Returns true if this structure is a Command Center and also
+ if this structure is active (having all of its requirements
+ satisfied) This is good for satisfying win/loss conditions
+ or _IsTubeRequired
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Outpost_3_Forsaken_World.DamageVector.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Creates a new Damage Vector
+ </summary>
+	<param name="Concussion">Amount of Concussion Damage</param>
+	<param name="Penetration"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,20 @@
+# Build outputs
+bin/Debug/*.exe
+bin/Debug/*.pdb
+bin/Debug/*.vshost.exe
+bin/Release/
+obj/Debug/
+obj/Release/
+
+# Visual Studio
+*.user
+*.suo
+.vs/
+Thumbs.db
+
+# Keep the Irrlicht DLLs (needed to build)
+!bin/Debug/Irrlicht.dll
+!bin/Debug/IrrlichtW.dll
+!bin/Debug/Irrlicht.NET.dll
+!bin/Debug/Irrlicht.NET.xml
+!bin/Debug/Irrlicht.Extensions.dll

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CA51909-FF91-4A6F-A99D-6BF2B5FA6002}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>Outpost_3_Forsaken_World</RootNamespace>
+    <AssemblyName>Outpost 3 Forsaken World</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Outpost 3 Forsaken World.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Outpost 3 Forsaken World.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Irrlicht.NET, Version=0.8.2731.19408, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Development\IrrNetCP_SDK_0.8\bin\Release\Irrlicht.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Engine\IrrlichtObj.vb" />
+    <Compile Include="Classes\Game\BuildQueue.vb" />
+    <Compile Include="Classes\Game\BuildingFactory.vb" />
+    <Compile Include="Classes\Game\GameLoop.vb" />
+    <Compile Include="Classes\Game\GameMap.vb" />
+    <Compile Include="Classes\Game\Player\AbstractPlayer.vb" />
+    <Compile Include="Classes\Game\Player\IPlayer.vb" />
+    <Compile Include="Classes\Game\Player\IPlayerCollection.vb" />
+    <Compile Include="Classes\Game\Player\Player.vb" />
+    <Compile Include="Classes\Game\Player\PlayerAI.vb" />
+    <Compile Include="Classes\Game\Player\PlayerAIDumb.vb" />
+    <Compile Include="Classes\Game\Player\PlayerAIMean.vb" />
+    <Compile Include="Classes\Game\Player\PlayerCollection.vb" />
+    <Compile Include="Classes\Game\ResourceManager.vb" />
+    <Compile Include="Classes\Game\Unit.vb" />
+    <Compile Include="Classes\Game\Unit\Building.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\AdvancedLabEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\AgridomeEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\BasicLabEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\CommandCenterEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\CommonOreSmelterEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\GORFEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\GuardPostEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\MedCenterEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\RareOreSmelterEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\ResDenEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\ResearchLabEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\ResidenceEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\StandardLabEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\StructureFactoryEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\TokamakEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Eden\VehicleFactoryEden.vb" />
+    <Compile Include="Classes\Game\Unit\Building\FoodBuilding.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\AgridomeGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\CommandCenterGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\CommonOreSmelterGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\GuardPostGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\RareOreSmelterGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\ResearchLabGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\ResidenceGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\SolarCollectorGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\StructureFactoryGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\TokamakGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Gemini\VehicleFactoryGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\AgridomeMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\ArachnidFactoryMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\BioreactorMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\BlightLabMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\BlightTurretMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\CommandCenterMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\CommonOreSmelterMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\GuardPostMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\HiveDenMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\OrganicExtractorMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\RareOreSmelterMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\ResearchLabMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\ResidenceMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\StructureFactoryMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Microbe\VehicleFactoryMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Building\OreBuilding.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\AgridomePlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\CommandCenterPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\CommonOreSmelterPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\GuardPostPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\MHDGeneratorPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\MedCenterPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\NurseryPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\RareOreSmelterPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\ResearchLabPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\ResidencePlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\StructureFactoryPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\TokamakPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\UniversityPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\Plymouth\VehicleFactoryPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Building\PowerPlantBuilding.vb" />
+    <Compile Include="Classes\Game\Unit\BuildingCollection.vb" />
+    <Compile Include="Classes\Game\Unit\IFoodFactory.vb" />
+    <Compile Include="Classes\Game\Unit\IFoodFactoryCollection.vb" />
+    <Compile Include="Classes\Game\Unit\IOreFactory.vb" />
+    <Compile Include="Classes\Game\Unit\IOreFactoryCollection.vb" />
+    <Compile Include="Classes\Game\Unit\IPowerPlant.vb" />
+    <Compile Include="Classes\Game\Unit\IPowerPlantCollection.vb" />
+    <Compile Include="Classes\Game\Unit\IProductionInterfaces.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Eden\EMPVehicleEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Eden\LynxEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Eden\PantherEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Eden\SpiderEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Eden\TigerEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Gemini\LynxGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Gemini\PantherGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Gemini\TigerGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Microbe\AcidWalkerMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Microbe\ArachnidScoutMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Microbe\ArachnidWarriorMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Microbe\SporeCrawlerMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Microbe\SporeLauncherMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Plymouth\LynxPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Plymouth\PantherPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Combat\Plymouth\TigerPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\CombatVehicle.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Eden\ConVecEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Eden\RepairVehicleEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Gemini\ConVecGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Gemini\RepairVehicleGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Microbe\ConVecMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Plymouth\ConVecPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Construction\Plymouth\RepairVehiclePlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Eden\EvacTransportEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Eden\EvacuationTransportEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Eden\OreTruckEden.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Gemini\EvacTransportGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Gemini\OreTruckGemini.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Microbe\EvacTransportMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Microbe\OreTruckMicrobe.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\EvacTransportPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\EvacuationTransportPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\Vehicle\Transport\Plymouth\OreTruckPlymouth.vb" />
+    <Compile Include="Classes\Game\Unit\VehicleCollection.vb" />
+    <Compile Include="Classes\Game\Util\DamageVector.vb" />
+    <Compile Include="Classes\Game\VehicleFactory.vb" />
+    <Compile Include="Classes\Game\Weapon.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\EMPEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\LaserEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\MicrowaveEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\RPGEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\RailGunEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\RailgunEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\StarflareEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\SupernovaEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Eden\ThorsHammerEden.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\EMPGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\LaserGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\MicrowaveGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\RPGGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\RailGunGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Gemini\StarflareGemini.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\AcidCannonMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\AcidCloudMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\BlightProjectorMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\PlasmaVineMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Microbe\SporeLauncherMicrobe.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\EMPPlymouth.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\LaserPlymouth.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\RPGPlymouth.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\RailgunPlymouth.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\RocketPlymouth.vb" />
+    <Compile Include="Classes\Game\Weapon\Plymouth\ThorsHammerPlymouth.vb" />
+    <Compile Include="ConfigurationObj.vb" />
+    <Compile Include="Main.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
