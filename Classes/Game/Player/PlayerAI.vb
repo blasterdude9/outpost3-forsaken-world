@@ -6,7 +6,7 @@
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub New()
-
+        MyBase.New("")
     End Sub
 
     ''' <summary>
