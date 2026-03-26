@@ -21,33 +21,69 @@ Public MustInherit Class Unit
     Protected _Player As Player
 
     Public ReadOnly Property Name() As String
-        Get : Return _Name : End Get
+        Get
+
+            Return _Name
+
+        End Get
     End Property
 
     Public ReadOnly Property ID() As Integer
-        Get : Return _ID : End Get
+        Get
+
+            Return _ID
+
+        End Get
     End Property
 
     Public Property HP() As Integer
-        Get : Return _HP : End Get
-        Set(ByVal value As Integer) : _HP = value : End Set
+        Get
+
+            Return _HP
+
+        End Get
+        Set(ByVal value As Integer)
+
+            _HP = value
+
+        End Set
     End Property
 
     Public ReadOnly Property MaxHP() As Integer
-        Get : Return _MaxHP : End Get
+        Get
+
+            Return _MaxHP
+
+        End Get
     End Property
 
     Public ReadOnly Property Armor() As ArmorType
-        Get : Return _Armor : End Get
+        Get
+
+            Return _Armor
+
+        End Get
     End Property
 
     Public Property Position() As Vector3D
-        Get : Return _Position : End Get
-        Set(ByVal value As Vector3D) : _Position = value : End Set
+        Get
+
+            Return _Position
+
+        End Get
+        Set(ByVal value As Vector3D)
+
+            _Position = value
+
+        End Set
     End Property
 
     Public ReadOnly Property Owner() As Player
-        Get : Return _Player : End Get
+        Get
+
+            Return _Player
+
+        End Get
     End Property
 
     Public Overridable Function Damage(ByVal dmg As Integer) As Integer
@@ -84,7 +120,11 @@ Public MustInherit Class Unit
     End Sub
 
     Public ReadOnly Property IsAlive() As Boolean
-        Get : Return _HP > 0 : End Get
+        Get
+
+            Return _HP > 0
+
+        End Get
     End Property
 
     Public Sub New(ByRef player As Player)

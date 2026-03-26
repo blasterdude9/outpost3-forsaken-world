@@ -21,6 +21,10 @@ Public Class EvacTransportGemini
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "GeminiEvacTransport.3ds" : End Get
+        Get
+
+            Return "GeminiEvacTransport.3ds"
+
+        End Get
     End Property
 End Class

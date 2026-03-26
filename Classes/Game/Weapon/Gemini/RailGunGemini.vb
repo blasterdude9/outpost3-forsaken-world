@@ -8,6 +8,10 @@ Public Class RailGunGemini
         _BaseDamage = New DamageVector(20, 60)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Rail Gun (Gemini)" : End Get
+        Get
+
+            Return "Rail Gun (Gemini)"
+
+        End Get
     End Property
 End Class

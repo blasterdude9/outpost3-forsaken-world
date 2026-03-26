@@ -8,6 +8,10 @@ Public Class LaserEden
         _BaseDamage = New DamageVector(30, 15)  ' 30 concussion, 15 penetration
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Laser" : End Get
+        Get
+
+            Return "Laser"
+
+        End Get
     End Property
 End Class

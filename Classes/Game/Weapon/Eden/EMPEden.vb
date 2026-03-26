@@ -15,6 +15,10 @@ Public Class EMPEden
         Return _BaseDamage
     End Function
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "EMP" : End Get
+        Get
+
+            Return "EMP"
+
+        End Get
     End Property
 End Class

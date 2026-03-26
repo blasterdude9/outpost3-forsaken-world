@@ -16,7 +16,13 @@ Public Class StructureFactoryGemini
         _Position = position
     End Sub
 
-    Public Sub QueueBuilding(ByVal b As String) : _BuildQueue.Enqueue(b) : End Sub
+    Public Sub QueueBuilding(ByVal b As String) 
+
+
+        _BuildQueue.Enqueue(b)
+
+
+    End Sub
     Public Function DequeueBuilding() As String
         If _BuildQueue.Count > 0 Then Return _BuildQueue.Dequeue()
         Return Nothing

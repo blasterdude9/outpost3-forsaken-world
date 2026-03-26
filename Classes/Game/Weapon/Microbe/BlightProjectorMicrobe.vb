@@ -17,6 +17,10 @@ Public Class BlightProjectorMicrobe
         Return _BaseDamage
     End Function
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Blight Projector" : End Get
+        Get
+
+            Return "Blight Projector"
+
+        End Get
     End Property
 End Class

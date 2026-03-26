@@ -8,6 +8,10 @@ Public Class RPGPlymouth
         _BaseDamage = New DamageVector(50, 10)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "RPG" : End Get
+        Get
+
+            Return "RPG"
+
+        End Get
     End Property
 End Class

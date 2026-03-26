@@ -29,6 +29,10 @@ Public Class RepairVehicleEden
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "EdenRepairVehicle.3ds" : End Get
+        Get
+
+            Return "EdenRepairVehicle.3ds"
+
+        End Get
     End Property
 End Class

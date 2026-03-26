@@ -21,6 +21,10 @@ Public Class EvacTransportMicrobe
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeEvacTransport.3ds" : End Get
+        Get
+
+            Return "MicrobeEvacTransport.3ds"
+
+        End Get
     End Property
 End Class

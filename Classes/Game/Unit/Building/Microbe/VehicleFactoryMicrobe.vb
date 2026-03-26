@@ -16,13 +16,23 @@ Public Class VehicleFactoryMicrobe
         _Position = position
     End Sub
 
-    Public Sub QueueVehicle(ByVal v As String) : _BuildQueue.Enqueue(v) : End Sub
+    Public Sub QueueVehicle(ByVal v As String) 
+
+
+        _BuildQueue.Enqueue(v)
+
+
+    End Sub
     Public Function DequeueVehicle() As String
         If _BuildQueue.Count > 0 Then Return _BuildQueue.Dequeue()
         Return Nothing
     End Function
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeVehicleFactory.3ds" : End Get
+        Get
+
+            Return "MicrobeVehicleFactory.3ds"
+
+        End Get
     End Property
 End Class

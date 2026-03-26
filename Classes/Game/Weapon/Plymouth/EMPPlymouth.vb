@@ -14,6 +14,10 @@ Public Class EMPPlymouth
         Return _BaseDamage
     End Function
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "EMP (Heavy)" : End Get
+        Get
+
+            Return "EMP (Heavy)"
+
+        End Get
     End Property
 End Class

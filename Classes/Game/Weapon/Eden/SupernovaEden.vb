@@ -8,6 +8,10 @@ Public Class SupernovaEden
         _BaseDamage = New DamageVector(200, 50)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Supernova" : End Get
+        Get
+
+            Return "Supernova"
+
+        End Get
     End Property
 End Class

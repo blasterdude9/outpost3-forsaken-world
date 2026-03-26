@@ -8,6 +8,10 @@ Public Class RocketPlymouth
         _BaseDamage = New DamageVector(90, 30)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Rocket" : End Get
+        Get
+
+            Return "Rocket"
+
+        End Get
     End Property
 End Class

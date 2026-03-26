@@ -8,6 +8,10 @@ Public Class RailGunEden
         _BaseDamage = New DamageVector(20, 60)  ' Low concussion, very high penetration
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Rail Gun" : End Get
+        Get
+
+            Return "Rail Gun"
+
+        End Get
     End Property
 End Class

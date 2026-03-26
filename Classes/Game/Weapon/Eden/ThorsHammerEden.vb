@@ -8,6 +8,10 @@ Public Class ThorsHammerEden
         _BaseDamage = New DamageVector(500, 200)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Thor's Hammer" : End Get
+        Get
+
+            Return "Thor's Hammer"
+
+        End Get
     End Property
 End Class

@@ -28,11 +28,23 @@ Public Class ResearchLabMicrobe
     End Property
 
     Public Property ResearchTopic() As String
-        Get : Return _ResearchTopic : End Get
-        Set(ByVal v As String) : _ResearchTopic = v : End Set
+        Get
+
+            Return _ResearchTopic
+
+        End Get
+        Set(ByVal v As String)
+
+            _ResearchTopic = v
+
+        End Set
     End Property
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeResearchLab.3ds" : End Get
+        Get
+
+            Return "MicrobeResearchLab.3ds"
+
+        End Get
     End Property
 End Class

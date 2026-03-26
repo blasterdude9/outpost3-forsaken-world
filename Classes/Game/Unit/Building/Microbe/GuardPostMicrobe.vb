@@ -31,10 +31,22 @@ Public Class GuardPostMicrobe
     Public Function CanFire() As Boolean
         Return _TicksSinceLastShot >= FIRE_INTERVAL_TICKS AndAlso _Status = BuildingStatus.ACTIVE
     End Function
-    Public Sub RecordShot() : _TicksSinceLastShot = 0 : End Sub
-    Public Sub Tick() : _TicksSinceLastShot += 1 : End Sub
+    Public Sub RecordShot() 
+
+        _TicksSinceLastShot = 0
+
+    End Sub
+    Public Sub Tick() 
+
+        _TicksSinceLastShot += 1
+
+    End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeGuardPost.3ds" : End Get
+        Get
+
+            Return "MicrobeGuardPost.3ds"
+
+        End Get
     End Property
 End Class

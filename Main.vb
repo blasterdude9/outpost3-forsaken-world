@@ -47,8 +47,8 @@ Module Main
         SeedDefaultMap(map)
 
         ' Hand off to the game loop
-        Dim loop As New GameLoop(_irrlicht, players, map)
-        loop.Run()
+        Dim gameLoop As New GameLoop(_irrlicht, players, map)
+        gameLoop.Run()
 
         System.Console.WriteLine("Thanks for playing Outpost 3: Forsaken World!")
     End Sub

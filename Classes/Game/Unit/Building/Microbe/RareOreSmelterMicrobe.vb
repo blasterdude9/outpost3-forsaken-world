@@ -17,6 +17,10 @@ Public Class RareOreSmelterMicrobe
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeRareOreSmelter.3ds" : End Get
+        Get
+
+            Return "MicrobeRareOreSmelter.3ds"
+
+        End Get
     End Property
 End Class

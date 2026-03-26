@@ -25,11 +25,23 @@ Public Class OreTruckPlymouth
     End Sub
 
     Public Property HaulingOreType() As OreType
-        Get : Return _OreType : End Get
-        Set(ByVal v As OreType) : _OreType = v : End Set
+        Get
+
+            Return _OreType
+
+        End Get
+        Set(ByVal v As OreType)
+
+            _OreType = v
+
+        End Set
     End Property
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "PlymouthOreTruck.3ds" : End Get
+        Get
+
+            Return "PlymouthOreTruck.3ds"
+
+        End Get
     End Property
 End Class

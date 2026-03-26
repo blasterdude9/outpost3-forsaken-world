@@ -8,6 +8,10 @@ Public Class StarflareGemini
         _BaseDamage = New DamageVector(85, 20)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Starflare (Gemini)" : End Get
+        Get
+
+            Return "Starflare (Gemini)"
+
+        End Get
     End Property
 End Class

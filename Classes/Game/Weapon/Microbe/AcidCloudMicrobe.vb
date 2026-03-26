@@ -8,6 +8,10 @@ Public Class AcidCloudMicrobe
         _BaseDamage = New DamageVector(40, 20)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Acid Cloud" : End Get
+        Get
+
+            Return "Acid Cloud"
+
+        End Get
     End Property
 End Class

@@ -26,6 +26,10 @@ Public Class AcidWalkerMicrobe
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeAcidWalker.3ds" : End Get
+        Get
+
+            Return "MicrobeAcidWalker.3ds"
+
+        End Get
     End Property
 End Class

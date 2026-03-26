@@ -8,6 +8,10 @@ Public Class MicrowaveGemini
         _BaseDamage = New DamageVector(25, 5)
     End Sub
     Public Overrides ReadOnly Property DisplayName() As String
-        Get : Return "Microwave" : End Get
+        Get
+
+            Return "Microwave"
+
+        End Get
     End Property
 End Class

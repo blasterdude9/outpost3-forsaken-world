@@ -98,9 +98,9 @@ Public MustInherit Class Vehicle
                 _HasTarget = False
                 _State = VehicleState.IDLE
             Else
-                Dim step As Single = Math.Min(_Speed, dist)
-                _Position.X += (dx / dist) * step
-                _Position.Z += (dz / dist) * step
+                Dim moveStep As Single = Math.Min(_Speed, dist)
+                _Position.X += (dx / dist) * moveStep
+                _Position.Z += (dz / dist) * moveStep
             End If
         End If
     End Sub

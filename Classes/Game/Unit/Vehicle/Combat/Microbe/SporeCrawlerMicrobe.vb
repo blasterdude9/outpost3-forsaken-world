@@ -29,6 +29,10 @@ Public Class SporeCrawlerMicrobe
     End Sub
 
     Public Overrides ReadOnly Property MeshFilename() As String
-        Get : Return "MicrobeSporeCrawler.3ds" : End Get
+        Get
+
+            Return "MicrobeSporeCrawler.3ds"
+
+        End Get
     End Property
 End Class

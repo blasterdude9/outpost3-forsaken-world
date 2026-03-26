@@ -27,54 +27,118 @@ Public MustInherit Class AbstractPlayer
 
     ' ---- IPlayer interface ----
     Public ReadOnly Property Name() As String Implements IPlayer.Name
-        Get : Return _Name : End Get
+        Get
+
+            Return _Name
+
+        End Get
     End Property
     Public ReadOnly Property Buildings() As BuildingCollection Implements IPlayer.Buildings
-        Get : Return _Buildings : End Get
+        Get
+
+            Return _Buildings
+
+        End Get
     End Property
     Public ReadOnly Property Children() As Integer Implements IPlayer.Children
-        Get : Return _Children : End Get
+        Get
+
+            Return _Children
+
+        End Get
     End Property
     Public ReadOnly Property CommonMultiplier() As Double Implements IPlayer.CommonMultiplier
-        Get : Return _CommonMultiplier : End Get
+        Get
+
+            Return _CommonMultiplier
+
+        End Get
     End Property
     Public ReadOnly Property CommonOre() As Integer Implements IPlayer.CommonOre
-        Get : Return _CommonOre : End Get
+        Get
+
+            Return _CommonOre
+
+        End Get
     End Property
     Public ReadOnly Property HasCommandCenter() As Boolean Implements IPlayer.HasCommandCenter
-        Get : Return _HasCommandCenter : End Get
+        Get
+
+            Return _HasCommandCenter
+
+        End Get
     End Property
     Public ReadOnly Property Morale() As Integer Implements IPlayer.Morale
-        Get : Return _Morale : End Get
+        Get
+
+            Return _Morale
+
+        End Get
     End Property
     Public ReadOnly Property PowerPlants() As IPowerFactoryCollection Implements IPlayer.PowerPlants
-        Get : Return _PowerFactories : End Get
+        Get
+
+            Return _PowerFactories
+
+        End Get
     End Property
     Public ReadOnly Property RareMultipler() As Double Implements IPlayer.RareMultipler
-        Get : Return _RareMultipler : End Get
+        Get
+
+            Return _RareMultipler
+
+        End Get
     End Property
     Public ReadOnly Property RareOre() As Integer Implements IPlayer.RareOre
-        Get : Return _RareOre : End Get
+        Get
+
+            Return _RareOre
+
+        End Get
     End Property
     Public ReadOnly Property Scientists() As Integer Implements IPlayer.Scientists
-        Get : Return _Scientists : End Get
+        Get
+
+            Return _Scientists
+
+        End Get
     End Property
     Public ReadOnly Property Workers() As Integer Implements IPlayer.Workers
-        Get : Return _Workers : End Get
+        Get
+
+            Return _Workers
+
+        End Get
     End Property
 
     ' ---- Extended properties ----
     Public ReadOnly Property Vehicles() As VehicleCollection
-        Get : Return _Vehicles : End Get
+        Get
+
+            Return _Vehicles
+
+        End Get
     End Property
     Public ReadOnly Property BuildQueue() As BuildQueue
-        Get : Return _BuildQueue : End Get
+        Get
+
+            Return _BuildQueue
+
+        End Get
     End Property
     Public ReadOnly Property AvailablePower() As Integer
-        Get : Return _AvailablePower : End Get
+        Get
+
+            Return _AvailablePower
+
+        End Get
     End Property
     Public ReadOnly Property PowerDemand() As Integer
-        Get : Return _PowerDemand : End Get
+        Get
+
+            Return _PowerDemand
+
+        End Get
     End Property
 
     ' ---- Mutation methods (called by ResourceManager / BuildQueue) ----
