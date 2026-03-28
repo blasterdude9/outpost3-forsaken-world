@@ -100,15 +100,6 @@ Public Class GameLoop
     Private Sub Render()
         _irrlicht.driver.BeginScene(True, True, New Color(255, 20, 40, 80))
         _irrlicht.scene.DrawAll()
-
-        ' HUD: draw status text
-        Dim gui As GUIEnvironment = _irrlicht.device.GUIEnvironment
-        Dim mark As String = "Mark: " & _markElapsed
-        Dim p0 As AbstractPlayer = DirectCast(_players(0), AbstractPlayer)
-        Dim status As String = p0.Name & "  Ore: " & p0.CommonOre & "  Pop: " & (p0.Workers + p0.Scientists)
-        gui.BuiltInFont.Draw(mark, New Rect(10, 10, 300, 30), New Color(255, 255, 255, 255))
-        gui.BuiltInFont.Draw(status, New Rect(10, 30, 500, 50), New Color(255, 200, 255, 100))
-
         _irrlicht.driver.EndScene()
     End Sub
 

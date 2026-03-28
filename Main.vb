@@ -88,10 +88,10 @@ Module Main
         Dim driver As VideoDriver = device.VideoDriver()
         Dim scene As SceneManager = device.SceneManager()
         ' Add a default camera so the scene renders
-        scene.AddCameraSceneNode(Nothing, _
-            New Vector3D(50, 80, -20), _
-            New Vector3D(50, 0, 50))
-        device.SetWindowCaption("Outpost 3: Forsaken World")
+        Dim cam As CameraSceneNode = scene.AddCameraSceneNode(Nothing)
+        cam.Position = New Vector3D(50, 80, -20)
+        cam.Target = New Vector3D(50, 0, 50)
+        device.WindowCaption = "Outpost 3: Forsaken World"
         Return New IrrlichtObj(device, driver, scene)
     End Function
 
